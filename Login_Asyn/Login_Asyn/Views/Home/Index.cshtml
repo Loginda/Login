@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@using Login_Asyn.Models;
+<h2>Index</h2>
+@model Login
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    <p><br/></p>
+    @ViewBag.k
+    <br/><br/>
+    <p>Tài khoản</p>
+    @Html.TextBoxFor(x => x.user);
+    <p>Mật khẩu</p>
+    @Html.TextBoxFor(x => x.pass);
+    <p></p>
+    <button type="submit">Đăng nhập</button>
+}
